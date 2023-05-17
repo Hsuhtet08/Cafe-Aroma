@@ -1,0 +1,195 @@
+* {
+	font-family: 'Crimson Text', serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fffff0;
+}
+
+a {	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #BE9B7B;
+	color: white;
+}
+.nav-links a {
+	color: white;
+}
+
+/* LOGO */
+.logo {
+	width: 240px;height: 80px;
+}
+
+/* NAVBAR MENU */
+.menu {
+	display: flex;
+	gap: 1em;
+	font-size: 18px;
+}
+.menu li:hover {
+	background-color: #DFCCAF;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+.menu li {
+	padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.food_menu {
+	position: relative; 
+}
+.dropdown {
+	background-color:  #BE9B7B;
+	padding: 0.5em 0;
+	position: absolute; /*WITH RESPECT TO PARENT*/
+	display: none;
+	border-radius: 8px;
+	top: 35px;
+}
+.dropdown li + li {
+	margin-top: 10px;
+}
+.dropdown li {
+	padding: 0.5em 1em;
+	width: 8em;
+	text-align: center;
+}
+.dropdown li:hover {
+	background-color: #DFCCAF;
+}
+.food_menu:hover .dropdown {
+	display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+/* CHECKBOX HACK */
+input[type=checkbox]{
+	display: none;
+} 
+
+/*HAMBURGER MENU*/
+.hamburger {
+	display: none;
+	font-size: 24px;
+	user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+	@media (max-width: 768px) {
+
+	.menu { 
+		display:none;
+		position: absolute;
+		background-color:#BE9B7B;
+		right: 0;
+		left: 0;
+		text-align: left;
+		padding: 16px 0;
+	}
+
+	.menu li:hover {
+		display: inline-block;
+		background-color:#BE9B7B;
+		transition: 0.3s ease;
+	}
+
+	.menu li + li {
+		margin-top: 12px;
+	}
+
+	input[type=checkbox]:checked ~ .menu{
+		display: block;
+	}
+
+	.hamburger {
+		display: block;
+	}
+
+	.dropdown {
+		left: 50%;
+		top: 30px;
+		transform: translateX(35%);
+	}
+
+	.dropdown li:hover {
+		background-color: #DFCCAF;
+	}
+}
+.Story{
+	text-align: center;
+	align-content: center;
+	background-color: #DFCCAF;
+	width: 50%;
+	margin: auto;
+}
+.Mission{
+	text-align: center;
+	align-content: center;
+	background-color: #DFCCAF;
+	width: 65%;
+	margin: auto;
+}
+.Meet{
+	text-align: center;
+	align-content: center;
+	background-color: #DFCCAF;
+	width: 65%;
+	margin: auto;
+}
+.creator{
+	background-color: #BE9B7B;
+	border: 2px black solid;
+	width: 20%;
+	margin: auto;
+	font-size: 20px;
+}
+footer{
+	padding: 5%;
+	background-color: #BE9B7B;
+	text-align: center;
+	height: 500px;
+}
+.column1{
+	width: 30%;
+	float: left;
+}
+.column2{
+	width: 30%;
+	float: left;
+}
+.column3{
+	width: 40%;
+	float: left;
+}
+.pr{
+			text-align: center;
+			
+		}
+		.d1::after{
+			content: "";
+			clear: both;
+			display: table;
+			
+		}
+		@media only screen and (max-width: 779px){
+        	
+        	.column1,.column2,.column3{
+        	width: 100%;
+        	}
+        }
